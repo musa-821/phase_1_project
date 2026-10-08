@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="musa.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Student Management System</h1>
+        </header>
+
+        <!-- Main Dashboard Split Layout -->
+        <div class="main-content">
+            
+            <!-- Left Side: Registration/Edit Form -->
+            <div class="form-container">
+                <h2 id="form-title">Add New Student</h2>
+                <form id="student-form">
+                    <input type="hidden" id="student-id">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roll">Roll Number</label>
+                        <input type="text" id="roll" required placeholder="A101">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course / Department</label>
+                        <input type="text" id="course" required placeholder="Computer Science">
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Add Student</button>
+                        <button type="button" id="cancel-btn" class="btn btn-secondary hidden">Cancel Edit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Side: Student Directory & Search -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Student Records</h2>
+                    <input type="text" id="search-input" placeholder="🔍 Search by name, roll no, or course...">
+                </div>
+                
+                <div class="scrollable-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-table-body">
+                            <!-- Dynamic rows injected here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+      <h1>Student Registration Form</h1>
+
+      <p>Please provide the information required for student registration.</p>
+    
+
+    <main>
+      <form action="#" method="post">
+        <!-- =========================================
+                 1. PERSONAL DETAILS
+            ========================================== -->
+
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div>
+            <label for="fullName"> Full Name </label>
+
+            <input type="text" id="fullName" name="fullName" />
+          </div>
+
+          <div>
+            <label for="dateOfBirth"> Date of Birth </label>
+
+            <input type="date" id="dateOfBirth" name="dateOfBirth" />
+          </div>
+
+          <fieldset>
+            <legend>Gender</legend>
+
+            <div>
+              <input type="radio" id="genderMale" name="gender" value="male" />
+
+              <label for="genderMale"> Male </label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="genderFemale"
+                name="gender"
+                value="female"
+              />
+
+              <label for="genderFemale"> Female </label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="genderOther"
+                name="gender"
+                value="other"
+              />
+
+              <label for="genderOther"> Other </label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="nationalId"> National ID / Passport Number </label>
+
+            <input type="text" id="nationalId" name="nationalId" />
+          </div>
+
+          <div>
+            <label for="nationality"> Nationality </label>
+
+            <select id="nationality" name="nationality">
+              <option value="">Select nationality</option>
+
+              <option value="kenyan">Kenyan</option>
+
+              <option value="ugandan">Ugandan</option>
+
+              <option value="tanzanian">Tanzanian</option>
+
+              <option value="other">Others</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 2. CONTACT DETAILS
+            ========================================== -->
+
+        <fieldset>
+          <legend>Contact Details</legend>
+
+          <div>
+            <label for="phone"> Student Phone Number </label>
+
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div>
+            <label for="email"> Student Email Address </label>
+
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div>
+            <label for="physicalAddress"> Physical Address </label>
+
+            <textarea
+              id="physicalAddress"
+              name="physicalAddress"
+              rows="4"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 3. GUARDIAN / SPONSOR DETAILS
+            ========================================== -->
+
+        <fieldset>
+          <legend>Guardian / Sponsor Details</legend>
+
+          <div>
+            <label for="guardianName"> Guardian / Sponsor Name </label>
+
+            <input type="text" id="guardianName" name="guardianName" />
+          </div>
+
+          <div>
+            <label for="relationship"> Relationship to Student </label>
+
+            <select id="relationship" name="relationship">
+              <option value="">Select relationship</option>
+
+              <option value="parent">Parent</option>
+
+              <option value="guardian">Guardian</option>
+
+              <option value="sponsor">Sponsor</option>
+
+              <option value="sibling">Sibling</option>
+
+              <option value="relative">Relative</option>
+
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="guardianPhone"> Guardian / Sponsor Phone </label>
+
+            <input type="tel" id="guardianPhone" name="guardianPhone" />
+          </div>
+
+          <div>
+            <label for="guardianEmail"> Guardian / Sponsor Email </label>
+
+            <input type="email" id="guardianEmail" name="guardianEmail" />
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 4. ACADEMIC DETAILS
+            ========================================== -->
+
+        <fieldset>
+          <legend>Academic Details</legend>
+
+          <div>
+            <label for="programme"> Programme </label>
+
+            <select id="programme" name="programme">
+              <option value="">Select programme</option>
+
+              <option value="information-science">
+                Bachelor of Information Science
+              </option>
+
+              <option value="software-engineering">
+                Bachelor of Software Engineering
+              </option>
+
+              <option value="education">Bachelor of Education</option>
+
+              <option value="business">
+                Bachelor of Business Administration
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label for="faculty"> Faculty / School </label>
+
+            <select id="faculty" name="faculty">
+              <option value="">Select faculty / school</option>
+
+              <option value="computing">School of Computing</option>
+
+              <option value="education">School of Education</option>
+
+              <option value="business">School of Business</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="previousInstitution"> Previous Institution </label>
+
+            <input
+              type="text"
+              id="previousInstitution"
+              name="previousInstitution"
+            />
+          </div>
+
+          <div>
+            <label for="qualification"> Highest Qualification </label>
+
+            <select id="qualification" name="qualification">
+              <option value="">Select qualification</option>
+
+              <option value="kcse">KCSE</option>
+
+              <option value="certificate">Certificate</option>
+
+              <option value="diploma">Diploma</option>
+
+              <option value="degree">Degree</option>
+
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="yearCompleted"> Year Completed </label>
+
+            <select id="yearCompleted" name="yearCompleted">
+              <option value="">Select year</option>
+
+              <option value="2026">2026</option>
+
+              <option value="2025">2025</option>
+
+              <option value="2024">2024</option>
+
+              <option value="2023">2023</option>
+
+              <option value="2022">2022</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Mode of Study</legend>
+
+            <div>
+              <input
+                type="radio"
+                id="fullTime"
+                name="studyMode"
+                value="full-time"
+              />
+
+              <label for="fullTime"> Full-time </label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="partTime"
+                name="studyMode"
+                value="part-time"
+              />
+
+              <label for="partTime"> Part-time </label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="distance"
+                name="studyMode"
+                value="distance"
+              />
+
+              <label for="distance"> Distance / ODeL </label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="intake"> Intake </label>
+
+            <select id="intake" name="intake">
+              <option value="">Select intake</option>
+
+              <option value="january">January</option>
+
+              <option value="may">May</option>
+
+              <option value="september">September</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 5. ADMINISTRATIVE DETAILS
+            ========================================== -->
+
+        <fieldset>
+          <legend>Administrative Details</legend>
+
+          <div>
+            <label for="admissionDate"> Admission Date </label>
+
+            <input type="date" id="admissionDate" name="admissionDate" />
+          </div>
+
+          <div>
+            <label for="studentStatus"> Student Status </label>
+
+            <select id="studentStatus" name="studentStatus">
+              <option value="">Select status</option>
+
+              <option value="new">New Student</option>
+
+              <option value="continuing">Continuing Student</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="sponsorship"> Sponsorship Category </label>
+
+            <select id="sponsorship" name="sponsorship">
+              <option value="">Select sponsorship</option>
+
+              <option value="self">Self Sponsored</option>
+
+              <option value="government">Government Sponsored</option>
+
+              <option value="scholarship">Scholarship</option>
+
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <p>
+              <strong>Registration Number</strong>
+            </p>
+
+            <p>To be assigned by the institution.</p>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 6. CLUBS — OPTIONAL
+            ========================================== -->
+
+        <fieldset>
+          <legend>Clubs — Optional</legend>
+
+          <p>Select any clubs you would like to join.</p>
+
+          <div>
+            <input type="checkbox" id="chessClub" name="clubs" value="chess" />
+
+            <label for="chessClub"> Chess Club </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="scienceClub"
+              name="clubs"
+              value="science"
+            />
+
+            <label for="scienceClub"> Science Club </label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="dramaClub" name="clubs" value="drama" />
+
+            <label for="dramaClub"> Drama Club </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="debateClub"
+              name="clubs"
+              value="debate"
+            />
+
+            <label for="debateClub"> Debate Club </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="islamicSociety"
+              name="clubs"
+              value="islamic-society"
+            />
+
+            <label for="islamicSociety"> Islamic Society </label>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 7. SPORTS — OPTIONAL
+            ========================================== -->
+
+        <fieldset>
+          <legend>Sports — Optional</legend>
+
+          <p>Select any sports you would like to participate in.</p>
+
+          <div>
+            <input
+              type="checkbox"
+              id="football"
+              name="sports"
+              value="football"
+            />
+
+            <label for="football"> Football </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="basketball"
+              name="sports"
+              value="basketball"
+            />
+
+            <label for="basketball"> Basketball </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="volleyball"
+              name="sports"
+              value="volleyball"
+            />
+
+            <label for="volleyball"> Volleyball </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="athletics"
+              name="sports"
+              value="athletics"
+            />
+
+            <label for="athletics"> Athletics </label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="handball"
+              name="sports"
+              value="handball"
+            />
+
+            <label for="handball"> Handball </label>
+          </div>
+        </fieldset>
+
+        <!-- =========================================
+                 SUBMIT
+            ========================================== -->
+
+        <div>
+          <button type="submit">Submit Registration</button>
+
+          <button type="reset">Clear Form</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>Student Registration System</p>
+    </footer>
+  
+
+    <script src="musa.js"></script>
+</body>
+</html>
