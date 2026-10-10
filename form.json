@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "name": "musa hussein",
+      "roll": "001",
+      "email": "musa@mail.com",
+      "course": "Computer Science",
+      "club": "computer club",
+      "sport": "football",
+      "id": "1"
+    },
+    {
+      "name": "musa hussein",
+      "roll": "4",
+      "email": "mu82sa14cpt@gmail.com",
+      "course": "software engering",
+      "club": "debate club",
+      "sport": "football",
+      "id": "1EyI3xgYu48"
+    },
+    {
+      "name": "musa hussein",
+      "roll": "A09",
+      "email": "mu82sa14cpt@gmail.com",
+      "course": "software engineering",
+      "club": "computer club",
+      "sport": "football",
+      "id": "yt3VDlis53Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

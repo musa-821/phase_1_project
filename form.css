@@ -110,7 +110,6 @@ h2 {
 .btn-primary {
     background: var(--primary);
     color: white;
-    flex-content: center;
     width: 100%;
 }
 

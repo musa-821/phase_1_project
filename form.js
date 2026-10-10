@@ -1,6 +1,7 @@
 // Server Endpoint
 const API_URL = 'http://localhost:3000/students';
 
+
 // UI State Management
 let isEditing = false;
 let editId = null;
