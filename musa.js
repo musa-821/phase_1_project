@@ -64,7 +64,7 @@ function showTable(list) {
       "<td>" +
       "<button class='btn btn-secondary btn-action' onclick='startEdit(\"" +
       s.id +
-      "\")'>Edit</button> " +
+      "\")'>Edit</button> <br><br> " +
       "<button class='btn btn-danger btn-action' onclick='deleteStudent(\"" +
       s.id +
       "\")'>Delete</button>" +
@@ -95,7 +95,7 @@ form.addEventListener("submit", async function (event) {
     var sameStudent = s.id == editId;
 
     if (sameRoll && !sameStudent) {
-      alert("This Roll Number already exists!");
+      alert("This Roll Number already exists! Please use a different Roll Number.");
       return;
     }
   }
@@ -143,7 +143,7 @@ function startEdit(id) {
 
 // ===== STEP 6: DELETE BUTTON =====
 async function deleteStudent(id) {
-  var answer = confirm("Delete this student?");
+  var answer = confirm("Are you sure you want to delete this student?");
 
   if (answer == true) {
     await fetch(url + "/" + id, { method: "DELETE" });

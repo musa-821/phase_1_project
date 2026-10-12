@@ -1,0 +1,139 @@
+/* ===== 1. PAGE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #e9eef3;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1c2b39;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== 2. TOP BAR ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #17324d;
+  color: #ffffff;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ===== 3. CARDS ===== */
+.page {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #c9d3dd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+/* ===== 4. FORM ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #aebbc8;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 3px solid #f2c46d;
+  border-color: #17324d;
+}
+
+.form-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box {
+  margin-bottom: 16px;
+}
+
+/* ===== 5. BUTTONS ===== */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #17324d;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #d9e1e9;
+  color: #17324d;
+}
+
+.btn-danger {
+  background: #b42323;
+  color: #ffffff;
+}
+
+.btn-action {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* ===== 6. TABLE ===== */
+.table-wrap {
+  overflow-x: auto; /* table scrolls sideways on small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dde4ea;
+  font-size: 14px;
+}
+
+th {
+  background: #f1f4f7;
+}

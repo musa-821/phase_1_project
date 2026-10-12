@@ -85,7 +85,7 @@ function renderStudents(students) {
     tableBody.innerHTML = '';
     
     if (students.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="5" style="text-align:center;">No student records found.</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No student records found.</td></tr>`;
         return;
     }
 
@@ -96,8 +96,10 @@ function renderStudents(students) {
             <td>${student.name}</td>
             <td>${student.email}</td>
             <td>${student.course}</td>
+            <td>${student.club}</td>
+            <td>${student.sport}</td>
             <td>
-                <button class="btn btn-secondary btn-action" onclick="loadEditForm('${student.id}')">Edit</button>
+                <button class="btn btn-secondary btn-action" onclick="loadEditForm('${student.id}')">Edit</button> <br><br>
                 <button class="btn btn-danger btn-action" onclick="deleteStudent('${student.id}')">Delete</button>
             </td>
         `;

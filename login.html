@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <main class="login-box">
+      <div class="login-top">Student Records</div>
+
+      <div class="login-body">
+        <h1>Admin login</h1>
+        <p class="subtitle">Sign in to manage student records.</p>
+
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input type="text" id="username" autocomplete="username" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" autocomplete="current-password" required />
+
+          <label class="show-password">
+            <input type="checkbox" id="show-password" />
+            Show password
+          </label>
+
+          <p id="error-message" class="error hidden">
+            Wrong username or password. Please try again.
+          </p>
+
+          <button type="submit" class="login-btn">Sign in</button>
+        </form>
+      </div>
+    </main>
+    <script src="login.js"></script>
+  </body>
+</html>
